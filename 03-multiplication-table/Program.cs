@@ -1,10 +1,18 @@
-﻿Console.WriteLine("=========== Table de multiplication ========\n\n\n");
+﻿Console.WriteLine("=========== Table de multiplication ========\n");
 
 Console.Write("Je veux la table de multiplication par: ");
-int.TryParse(Console.ReadLine(), out int a);
+int a, b;
+while (!int.TryParse(Console.ReadLine(), out a))
+{
+    Console.WriteLine("Mauvaise saisie. Essayez encore : ");
+}
+
 
 Console.Write($"La table de {a} ira de 0 à ");
-int.TryParse(Console.ReadLine(), out int b);
+while (!int.TryParse(Console.ReadLine(), out b))
+{
+    Console.WriteLine("Mauvaise saisie. Essayez encore : ");
+}
 
 for (int j = 0; j <= b; j++)
 {
