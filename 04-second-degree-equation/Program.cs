@@ -1,6 +1,6 @@
 ﻿Console.WriteLine("====== Programme de calcul d'équation de second degré =====\n\n");
 
-Console.WriteLine("L'équation est sous la forme : aX^2 + bX + c");
+Console.WriteLine("L'équation est sous la forme : aX^2 + bX + c = 0");
 
 Console.Write("Saisissez le nombre a : ");
 int a, b, c;
@@ -29,5 +29,15 @@ Console.WriteLine("===== Calcul du discriminat ==== \n");
 d = Math.Pow(b, 2) - 4 * a * c;
 
 Console.WriteLine($"discriminat : d = {d}");
+
+if (d < 0)
+{
+    Console.WriteLine($"Aucune solution possible pour l'équation  (E): {a}X^2 + {b}X + {c} = 0");
+}else if(d == 0)
+{
+    Console.WriteLine($"Une solution possible pour l'équation  (E): {a}X^2 + {b}X + {c} = 0");
+}else{
+    Console.WriteLine($"Deux solutions possibles pour l'équation  (E): {a}X^2 + {b}X + {c} = 0");
+}
 
 
