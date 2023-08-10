@@ -33,11 +33,21 @@ Console.WriteLine($"discriminat : d = {d}");
 if (d < 0)
 {
     Console.WriteLine($"Aucune solution possible pour l'équation  (E): {a}X^2 + {b}X + {c} = 0");
-}else if(d == 0)
+}
+else if (d == 0)
 {
     Console.WriteLine($"Une solution possible pour l'équation  (E): {a}X^2 + {b}X + {c} = 0");
-}else{
+
+    float s0 = -b / (2 * a);
+    Console.WriteLine($"La solution dans R est {s0}");
+}
+else
+{
+    double s1 = (-b + (Math.Sqrt(d)) / 2 * a);
+    double s2 = (-b - (Math.Sqrt(d)) / 2 * a);
+
     Console.WriteLine($"Deux solutions possibles pour l'équation  (E): {a}X^2 + {b}X + {c} = 0");
+    Console.WriteLine($"La solution dans R est ( S1= {s1}, S1= {s2} )");
 }
 
 
